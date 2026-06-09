@@ -1,0 +1,41 @@
+     /* =================================================================== */
+     /*                                                                     */
+     /*  Kurzdokumentation :                                                */
+     /*                                                                     */
+     /*  Bereich . . . : RTVUSRAUT                                          */
+     /*  Objekt  . . . : RTVUSRA1                                           */
+     /*  Beschreibung  : Command: Retrieve User Authority                   */
+     /*  Author  . . . : Thomas Raddatz   <thomas.raddatz@tools400.de>      */
+     /*  Datum . . . . : 08.01.2015                                         */
+     /*                                                                     */
+     /* =================================================================== */
+     /*                                                                     */
+     /*  This software is free software, you can redistribute it and/or     */
+     /*  modify it under the terms of the GNU General Public License (GPL)  */
+     /*  as published by the Free Software Foundation.                      */
+     /*                                                                     */
+     /*  See GNU General Public License for details.                        */
+     /*          http://www.opensource.org                                  */
+     /*          http://www.opensource.org/licenses/gpl-license.html        */
+     /*                                                                     */
+     /* =================================================================== */
+     /*  History:                                                           */
+     /*                                                                     */
+     /*  Datum       Name          Dnderung                                 */
+     /*  ----------  ------------  ---------------------------------------  */
+     /*                                                                     */
+     /* =================================================================== */
+     /* >>PRE-COMPILER<<                                                    */
+     /*   >>CRTCMD<< CRTPGM       PGM(&LI/RTVUSRAUT);                       */
+     /*   >>LINK<<                                                          */
+     /*     >>PARM<< MODULE(&LI/RTVUSRA1  );                                */
+     /*     >>PARM<< ENTMOD(&LI/RTVUSRA1  );                                */
+     /*     >>PARM<< ACTGRP(*NEW      );                                    */
+     /*     >>PARM<< USRPRF(*OWNER);                                        */
+     /*     >>PARM<< DETAIL(*BASIC);                                        */
+     /*     >>PARM<< ALWUPD(*YES);                                          */
+     /*     >>PARM<< ALWLIBUPD(*YES);                                       */
+     /*   >>END-LINK<<                                                      */
+     /*   >>EXECUTE<<                                                       */
+     /* >>END-PRE-COMPILER<<                                                */
+     /* =================================================================== */

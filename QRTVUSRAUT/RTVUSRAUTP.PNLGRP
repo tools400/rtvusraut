@@ -1,0 +1,178 @@
+.*=====================================================================*
+.*                                                                     *
+.*  Kurzdokumentation :                                                *
+.*                                                                     *
+.*  Bereich . . . : RTVUSRAUT                                          */
+.*  Objekt  . . . : RTVUSRA1                                           */
+.*  Beschreibung  : Command: Retrieve User Authority                   */
+.*  Author  . . . : Thomas Raddatz   <thomas.raddatz@tools400.de>      */
+.*  Datum . . . . : 08.01.2015                                         */
+.*                                                                     *
+.*=====================================================================*
+.*                                                                     *
+.*  This software is free software, you can redistribute it and/or     *
+.*  modify it under the terms of the GNU General Public License (GPL)  *
+.*  as published by the Free Software Foundation.                      *
+.*                                                                     *
+.*  See GNU General Public License for details.                        *
+.*          http://www.opensource.org                                  *
+.*          http://www.opensource.org/licenses/gpl-license.html        *
+.*                                                                     *
+.*=====================================================================*
+.*  History:                                                           *
+.*                                                                     *
+.*  Datum       Name          Änderung                                 *
+.*  ----------  ------------  ---------------------------------------  *
+.*                                                                     *
+.*=====================================================================*
+.* >>PRE-COMPILER<<                                                    *
+.*   >>CRTCMD<< CRTPNLGRP    PNLGRP(&LI/RTVUSRAUT) +                   *
+.*                           SRCFILE(&SL/&SF) +                        *
+.*                           SRCMBR(&SM);                              *
+.*   >>COMPILE<<                                                       *
+.*   >>END-COMPILE<<                                                   *
+.*   >>EXECUTE<<                                                       *
+.* >>END-PRE-COMPILER<<                                                *
+.*=====================================================================*
+:PNLGRP.
+.*
+:HELP name='RTVUSRAUT/ALL'.
+:IMHELP name=RTVUSRAUT.
+:IMHELP name='RTVUSRAUT/OBJ       '.
+:IMHELP name='RTVUSRAUT/OBJTYPE   '.
+:IMHELP name='RTVUSRAUT/USER      '.
+:IMHELP name='RTVUSRAUT/AUT       '.
+:EHELP.
+.*--------------------------------------------------------------------
+.* Hilfetext für den Befehl
+.*--------------------------------------------------------------------
+:HELP NAME='RTVUSRAUT'.
+Retrieve User Authority (RTVUSRAUT) - Help
+:P.
+The Retrieve User Authority (RTVUSRAUT) command retrieves a specific
+user's authority for an object
+.*
+:EHELP.
+.*
+.*--------------------------------------------------------------------
+.* Hilfetext für Schlüsselwort OBJ
+.*--------------------------------------------------------------------
+:HELP name='RTVUSRAUT/OBJ       '.
+Object - Hilfe
+:XH3.Object (OBJ)
+:P.
+Specifies the object for which you want to retrieve
+information.
+.*
+:IMHELP name='COM/REQPARM'.
+.*
+:PARML.
+:PT.:PV.name:EPV.
+:PD.Specify the name of the object for which the
+authority is to be retrieved.
+:EPARML.
+:P.
+Valid library values are:
+:P.
+:PARML.
+:PT.:PK DEF.*LIBL:EPK.
+:PD.All libraries in the library list for the current
+thread are searched until the first match is found.
+:PT.:PV.*CURLIB:EPV.
+:PD.The current library for the thread is searched. If no
+library is specified as the current library for the
+thread, the QGPL library is searched.
+:PT.:PV.name:EPV.
+:PD.Specify the name of the library to be searched.
+:EPARML.
+.*
+:EHELP.
+.*
+.*--------------------------------------------------------------------
+.* Hilfetext für Schlüsselwort OBJTYPE
+.*--------------------------------------------------------------------
+:HELP name='RTVUSRAUT/OBJTYPE   '.
+Object type - Help
+:XH3.Object type (OBJTYPE)
+:P.
+Specifies the type of the object for which you want to
+retrieve the information.
+.*
+:IMHELP name='COM/REQPARM'.
+.*
+:PARML.
+:PT.:PV.object-type:EPV.
+:PD.Specify the type of the object for which information
+is to be retrieved.
+:EPARML.
+.*
+:EHELP.
+.*
+.*--------------------------------------------------------------------
+.* Hilfetext für Schlüsselwort USER
+.*--------------------------------------------------------------------
+:HELP name='RTVUSRAUT/USER      '.
+User - Help
+:XH3.User (USER)
+:P.
+Specifies the user whose authority for the specified object
+is retrieved.
+.*
+:IMHELP name='COM/OPTPARM'.
+.*
+:PARML.
+:PT.:PK DEF.*CURRENT:EPK.
+:PD.The authority of the current user is retrieved.
+:PT.:PV.*PUBLIC:EPV.
+:PD.The authority of public users is retrieved.
+:PT.:PV.name:EPV.
+:PD.Specify the name of the user.
+:EPARML.
+.*
+:EHELP.
+.*
+.*--------------------------------------------------------------------
+.* Hilfetext für Schlüsselwort AUT
+.*--------------------------------------------------------------------
+:HELP name='RTVUSRAUT/AUT       '.
+CL var for AUT          (10) - Help
+:XH3.CL var for AUT          (10) (AUT)
+:P.
+Specifies a 10-character variable used to return the authority.
+.*
+:EHELP.
+.*
+.*====================================================================
+.*  Textbausteine, die an mehreren Stellen im Hilfetext
+.*  verwendet werden.
+.*====================================================================
+
+.*=====================================
+.*  Erforderlicher Parameter
+.*=====================================
+:HELP NAME='COM/REQPARM'.
+:P.
+This is a required parameter.
+:P.
+:IMHELP name='COM/VALUES'.
+:EHELP.
+
+.*=====================================
+.*  Optionaler Parameter
+.*=====================================
+:HELP NAME='COM/OPTPARM'.
+:P.
+This is an optional parameter.
+:P.
+:IMHELP name='COM/VALUES'.
+:EHELP.
+
+.*=====================================
+.*  Werteliste
+.*=====================================
+:HELP NAME='COM/VALUES'.
+:P.
+The possible values are:
+:EHELP.
+.*
+:EPNLGRP.
